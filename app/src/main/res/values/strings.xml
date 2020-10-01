@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">News API App</string>
+    <string name="find_news">Global news source for Android </string>
+    <string name="use_keywords">Search for</string>
+    <string name="date">Date  %1$s</string>
+    <string name="type">Type  %1$s</string>
+    <string name="no_news_found">News not found</string>
+    <string name="bad_server">No response from the server</string>
+    <string name="network_issue">Check your internet connectivity please</string>
+</resources>
