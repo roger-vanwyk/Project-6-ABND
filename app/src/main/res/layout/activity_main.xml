@@ -50,7 +50,8 @@
         app:floatingSearch_showSearchKey="true"
         app:floatingSearch_suggestionsListAnimDuration="250"
         app:layout_scrollFlags="scroll|enterAlways"
-        app:popupTheme="@style/AppTheme.PopupOverlay" />
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+		tool:cntext="com.example.android.newsapiapp.FloatingSearchView" />
 
     <ProgressBar
         android:id="@+id/loading_indicator"

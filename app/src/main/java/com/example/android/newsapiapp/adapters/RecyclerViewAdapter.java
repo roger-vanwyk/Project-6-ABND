@@ -6,16 +6,16 @@ import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.R.*;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.android.newsapiapp.News;
-import com.example.android.newsapiapp.R;
+import com.example.android.newsapiapp.*;
 
 import java.util.ArrayList;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<com.example.android.newsapiapp.adapters.NewsViewHolder> {
+public class RecyclerViewAdapter extends RecyclerView.Adapter<com.example.android.newsapiapp.adapters.NewsAdapter> {
 
     private ArrayList<News> items;
     private Activity activity;
@@ -29,13 +29,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<com.example.androi
 
     @NonNull
     @Override
-    public com.example.android.newsapiapp.adapters.NewsViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public com.example.android.newsapiapp.adapters.NewsAdapter onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from (parent.getContext ( )).inflate (R.layout.list_item, parent, false);
-        return new com.example.android.newsapiapp.adapters.NewsViewHolder (view);
+        return new com.example.android.newsapiapp.adapters.NewsAdapter (view);
     }
 
     @Override
-    public void onBindViewHolder(com.example.android.newsapiapp.adapters.NewsViewHolder holder, final int position) {
+    public void onBindViewHolder(com.example.android.newsapiapp.adapters.NewsAdapter holder, final int position) {
 
         News news = items.get (position);
         holder.newsCategory.setText (news.getCategory ( ));

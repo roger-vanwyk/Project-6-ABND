@@ -2,7 +2,7 @@ package com.example.android.newsapiapp.adapters;
 
 import android.app.Activity;
 
-import com.example.android.newsapiapp.News;
+import com.example.android.newsapiapp.*;
 
 import java.util.ArrayList;
 

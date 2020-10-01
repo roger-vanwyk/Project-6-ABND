@@ -7,6 +7,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.net.HttpURLConnection;
+
+import com.example.android.newsapiapp.*;
 
 class JSONParser {
 
@@ -18,7 +21,7 @@ class JSONParser {
 
     ArrayList<com.example.android.newsapiapp.News> getResponseData() {
         ArrayList<com.example.android.newsapiapp.News> newsList = new ArrayList<com.example.android.newsapiapp.News> ( );
-        String responseJSON = com.example.android.newsapiapp.utils.HttpGetRequest.getResponseString (this.dataSource);
+        String responseJSON = com.example.android.newsapiapp.HttpURLConnection.getResponseString (this.dataSource);
         if (responseJSON == null) {
             return null;
         }
@@ -26,7 +29,7 @@ class JSONParser {
             JSONObject reader = new JSONObject (responseJSON);
             JSONObject response = reader.getJSONObject ("response");
             JSONArray resultArray = response.getJSONArray ("results");
-            for (int i = 0; i < resultArray.length ( ); i++) {
+            for (int i = 0; i < newsList.length ( ); i++) {
                 JSONObject news = resultArray.getJSONObject (i);
                 String title = news.getString ("webTitle");
                 String type = news.getString ("type");

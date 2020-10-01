@@ -12,6 +12,7 @@ import android.os.Parcelable;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
+import android.R;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -51,7 +52,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             Intent i = new Intent (Intent.ACTION_VIEW);
             i.setData (Uri.parse (url));
             startActivity (i);
-        }
+			return ;
+		}
     });
     private View loadingIndicator;
     private Loader<ArrayList<News>> loader;
@@ -100,10 +102,12 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         setupSearchBar ( );
 
 
-    }
+		return ;
+	}
 
     private void setupSearchBar() {
-    }
+		return ;
+	}
 
     @NonNull
     @Override
@@ -128,14 +132,16 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         else {
             newsAdapter.updateAdapterData (data);
         }
-    }
+		return 0;
+	}
 
     @Override
     public void onLoaderReset(@NonNull Loader<ArrayList<News>> loader) {
         newsAdapter.updateAdapterData (new ArrayList<News> ( ));
         setSearchLabelVisibility (true);
         setLoadingIndicatorVisibilty (false);
-    }
+		return 0;
+	}
 
     /**
      * Sets visibility of search label
@@ -147,7 +153,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         searchLabel = this.findViewById (R.id.search_label);
         int id = flag ? View.VISIBLE : View.INVISIBLE;
         searchLabel.setVisibility (id);
-    }
+		return ;
+	}
 
     /**
      * Show/hide loading indicator
@@ -157,7 +164,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void setLoadingIndicatorVisibilty(boolean flag) {
         int id = flag ? View.VISIBLE : View.INVISIBLE;
         loadingIndicator.setVisibility (id);
-    }
+		return ;
+	}
 
     @Override
     public void onBackPressed() {
@@ -168,18 +176,20 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             return;
         }
         finish ( );
-    }
+		return ;
+	}
 
     @Override
     public void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState (outState);
         ArrayList<News> searchList = newsAdapter.getAdapterData ( );
-        News[] books = new News[searchList.size ( )];
-        for (int i = 0; i < books.length; i++) {
-            books[i] = searchList.get (i);
+        News[] news = new News[searchList.size ( )];
+        for (int i = 0; i < news.length; i++) {
+            news[i] = searchList.get (i);
         }
-        outState.putParcelableArray (SEARCH_RESULTS, books);
-    }
+        outState.putParcelableArray (SEARCH_RESULTS, news);
+		return ;
+	}
 
 
 }

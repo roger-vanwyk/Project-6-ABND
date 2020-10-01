@@ -22,7 +22,7 @@
             tools:text="Business" />
 
         <TextView
-            android:id="@+id/news_title"
+            android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/category"
@@ -32,14 +32,14 @@
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold"
-            tools:text="News title" />
+            tools:text="Title" />
 
 
         <TextView
             android:id="@+id/type"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/news_title"
+            android:layout_below="@id/title"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:textColor="@color/typeColor"

@@ -8,9 +8,15 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.net.URLConnection;
 
+import com.example.android.newsapiapp.OnSearchListener;
+import com.example.android.newsapiapp.SearchSuggestion;
+import com.example.android.newsapiapp.News;
+import com.example.android.newsapiapp.utils.*;
+import com.example.android.newsapiapp.adapters.*;
 
-public class HttpGetRequest {
+class HttpURLConnection {
     public static final String REQUEST_METHOD = "GET";
     public static final int READ_TIMEOUT = 10000;
     public static final int CONNECTION_TIMEOUT = 10000;
@@ -26,7 +32,7 @@ public class HttpGetRequest {
             URL myUrl = new URL(stringUrl);
             //Create an http connection
             HttpURLConnection connection = (HttpURLConnection)
-                    myUrl.openConnection();
+			myUrl.openConnection();
             //Setting methods and timeouts
             connection.setRequestMethod(REQUEST_METHOD);
             connection.setReadTimeout(READ_TIMEOUT);

@@ -5,18 +5,20 @@ package com.example.android.newsapiapp.adapters;
 import android.*;
 import android.view.*;
 import android.widget.*;
+import android.R.*;
+
 import com.example.android.newsapiapp.*;
 
 import static androidx.recyclerview.widget.RecyclerView.ViewHolder;
 
-class NewsViewHolder extends ViewHolder {
+class NewsAdapter extends ViewHolder {
 
     TextView newsCategory, newsTitle, newsType, newsDate;
 
     /**
      * @param itemView
      */
-    NewsViewHolder(View itemView) {
+    NewsAdapter(View itemView) {
         super(itemView);
 
         newsCategory = itemView.findViewById(R.id.category);
