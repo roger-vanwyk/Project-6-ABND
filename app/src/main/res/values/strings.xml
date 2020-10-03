@@ -1,12 +1,3 @@
 <resources>
-    <string name="app_name">News API App</string>
-    <string name="find_news">Global news source for Android </string>
-    <string name="use_keywords">Search for</string>
-    <string name="date">Date</string>
-	<string name="title">Title</string>
-    <string name="type">Type</string>
-	<string name="category">Category</string>
-    <string name="no_news_found">News not found</string>
-    <string name="bad_server">No response from the server</string>
-    <string name="network_issue">Check your internet connectivity please</string>
+	<string	name="app_name"	translatable="false">ABND News</string>
 </resources>
