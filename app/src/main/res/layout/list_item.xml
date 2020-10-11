@@ -1,64 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:orientation="horizontal"
+    android:paddingEnd="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+   <!--THIS LIST_ITEM WILL NE INFLATED INTO THE LISTVIEW--> android:paddingStart="16dp"
+    android:id="@+id/list_item">
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="8dp">
-
-        <TextView
-            android:id="@+id/category"
+        android:paddingTop="8dp"
+        android:layout_weight="5">
+        <!--THE NEWS ARTICLE TITLE WILL DISPLAY HERE-->
+<TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:textColor="@color/categoryColor"
+            tools:text="Title"
             android:textSize="16sp"
-            android:textStyle="bold"
-            tools:text="Business" />
-
+            android:id="@+id/article_title">
+        </TextView>
+<!--ARTICLE CATEGORY TYPE WILL DISPLAY HERE-->
         <TextView
-            android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/category"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginTop="8dp"
-            android:textColor="@color/black"
+            tools:text="Type"
             android:textSize="16sp"
-            android:textStyle="bold"
-            tools:text="Title" />
-
-
+            android:id="@+id/article_type">
+        </TextView>
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        android:layout_weight="1">
+<!-- PUBLICATION DATE OF ARTICLE DISPLAYS HERE-->
         <TextView
-            android:id="@+id/type"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/title"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:textColor="@color/typeColor"
-            android:textStyle="bold"
-            tools:text="Type" />
-
+            tools:text="Date"
+            android:textSize="12sp"
+            android:id="@+id/article_date">
+        </TextView>
+<!-- ARTICLE WEB URL DISPLAYS HERE -->
         <TextView
-            android:id="@+id/date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/type"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginTop="4dp"
-            android:textColor="@color/dateColor"
-            android:textStyle="bold"
-            tools:text="Date" />
+            tools:text="Url"
+            android:textSize="12sp"
+            android:id="@+id/article_url">
+        </TextView>
 
-
-    </RelativeLayout>
+    </LinearLayout>
 
 </LinearLayout>
+
+

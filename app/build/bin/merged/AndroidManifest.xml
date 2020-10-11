@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.android.newsguardian"
+    package="com.example.android.newsreport"
     android:versionCode="1"
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="21"
-        android:targetSdkVersion="28" />
+        android:minSdkVersion="15"
+        android:targetSdkVersion="30" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -14,35 +14,24 @@
     <application
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-        android:icon="@drawable/app_icon"
-        android:label="ABND News"
-        android:largeHeap="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
         android:theme="@style/AppTheme" >
-        <activity
-            android:name="com.example.android.newsguardian.MainActivity"
-            android:configChanges="orientation|screenSize"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden" >
+        <activity android:name="com.example.android.newsreport.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.example.android.newsguardian.HomeActivity"
-            android:configChanges="orientation|screenSize"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden" />
-        <activity
-            android:name="com.example.android.newsguardian.OpenNewsActivity"
-            android:configChanges="orientation|screenSize"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden" />
-
-        <uses-library
-            android:name="org.apache.http.legacy"
-            android:required="false" />
+        <activity android:name="com.example.android.newsreport.NewsAdapter" >
+        </activity>
+        <activity android:name="com.example.android.newsreport.NewsLoader" >
+        </activity>
+        <activity android:name="com.example.android.newsreport.QueryUtils" >
+        </activity>
     </application>
 
 </manifest>
