@@ -13,7 +13,10 @@ buildscript {
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> branch 'master' of https://github.com/roger-vanwyk/Project-6-ABND.git
 configurations.all {
     resolutionStrategy {
         force 'com.android.support:support-v4:27.1.0'
@@ -29,4 +32,8 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> branch 'master' of https://github.com/roger-vanwyk/Project-6-ABND.git
