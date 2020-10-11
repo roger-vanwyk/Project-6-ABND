@@ -1,2 +1,2 @@
-include="app"
-root:app_name="NewsApp"
+include ':app'
+rootProject.name='NewsApp'
