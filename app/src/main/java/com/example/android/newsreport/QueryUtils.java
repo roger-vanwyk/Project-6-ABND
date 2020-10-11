@@ -26,7 +26,7 @@ import com.example.android.newsreport.*;
 public class QueryUtils {
 
     static String createStringUrl() {
-        return "https://content.guardianapis.com/search?q=debate&tag=politics/politics&from-date=2020-01-01&api-key=test";
+        return "https://content.guardianapis.com/search?api-key=38418974-ec08-4240-af40-0b0740ddf870";
     }
 
     static URL createUrl() {
