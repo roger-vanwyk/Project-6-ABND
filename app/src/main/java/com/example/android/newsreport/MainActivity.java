@@ -31,7 +31,8 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<L
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       /** Set the UI */ setContentView(R.layout.activity_main);
+       // Set UI
+	   setContentView(R.layout.activity_main);
         ListView newsListView = (ListView) findViewById(R.id.list);
         mAdapter = new NewsAdapter(this, new ArrayList<News>());
         newsListView.setAdapter(mAdapter);
@@ -49,14 +50,14 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<L
 
         ConnectivityManager connMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
-/** Check if network is connected */
+// Check network connection
         if (networkInfo != null && networkInfo.isConnected()) {
             LoaderManager loaderManager = getLoaderManager();
             loaderManager.initLoader(News_LOADER_ID, null, this);
         } else {
             View loadingIndicator = findViewById(R.id.loading_indicator);
             loadingIndicator.setVisibility(View.GONE);
-   /** Set empty view */
+   // Set empty view state
    mEmptyStateTextView.setText("no_internet_connection");
         }
 
@@ -86,3 +87,4 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<L
 		return ;
 	}
 }
+

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<!-- LISTVIEW TO INFLATE OUR PARSE DATA TO -->
+<!-- JSON RESPONSE PARSE DATA INFLATE TO LISTVIEW -->
     <ListView
         android:id="@+id/list"
         android:orientation="vertical"

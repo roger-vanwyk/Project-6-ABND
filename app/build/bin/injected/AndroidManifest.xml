@@ -6,7 +6,7 @@
 	android:versionName="1.0">
 
 	<uses-sdk
-		android:minSdkVersion="15"
+		android:minSdkVersion="16"
 		android:targetSdkVersion="30"/>
 
 	<uses-permission
@@ -35,6 +35,17 @@
 					android:name="android.intent.category.LAUNCHER"/>
 
 			</intent-filter>
+
+		</activity>
+
+		<activity
+			android:name=".News"
+			android:label="@string/list_item"
+			android:screenOrientation="portrait">
+
+			<meta-data
+				android:name="android.support.PARENT_ACTIVITY"
+				android:value="com.example.android.newsreport.MainActivity"/>
 
 		</activity>
 

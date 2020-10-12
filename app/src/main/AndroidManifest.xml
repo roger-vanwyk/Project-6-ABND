@@ -17,6 +17,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+		<activity android:name=".News"
+			android:label="@string/list_item"
+			android:screenOrientation="portrait">
+            <meta-data
+				android:name="android.support.PARENT_ACTIVITY"
+				android:value="com.example.android.newsreport.MainActivity"/>
+        </activity>
 		<activity android:name=".NewsAdapter">
 		</activity>
 			<activity android:name=".NewsLoader">

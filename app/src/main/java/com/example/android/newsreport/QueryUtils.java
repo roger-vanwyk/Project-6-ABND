@@ -22,13 +22,12 @@ import java.util.Locale;
 
 import com.example.android.newsreport.*;
 
-
 public class QueryUtils {
 
     static String createStringUrl() {
         return "https://content.guardianapis.com/search?api-key=38418974-ec08-4240-af40-0b0740ddf870";
     }
-
+// Create Url
     static URL createUrl() {
         String stringUrl = createStringUrl();
         try {
@@ -38,7 +37,7 @@ public class QueryUtils {
             return null;
         }
     }
-
+// Format time display to desired preference
     private static String formatDate(String rawDate) {
         String jsonDatePattern = "yyyy-MM-dd'T'HH:mm:ss'Z'";
         SimpleDateFormat jsonFormatter = new SimpleDateFormat(jsonDatePattern, Locale.US);

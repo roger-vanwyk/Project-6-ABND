@@ -21,7 +21,7 @@ public class NewsLoader extends AsyncTaskLoader<List<News>> {
             forceLoad();
 			return ;
         }
-
+// Load in background
         @Override
         public List<News> loadInBackground () {
             List<News> newsArticlesList = (List<News>) null;
@@ -29,6 +29,7 @@ public class NewsLoader extends AsyncTaskLoader<List<News>> {
                 URL url = QueryUtils.createUrl();
                 String jsonResponse = QueryUtils.makeHttpRequest(url);
                 newsArticlesList = QueryUtils.parseJson(jsonResponse);
+				// Catch IOExeption if something goes wrong with parse
             } catch (IOException e) {
                 Log.e("Queryutils", "Error Loader LoadInBackground: ", e);
             }

@@ -48,7 +48,7 @@
             android:textSize="12sp"
             android:id="@+id/article_date">
         </TextView>
-<!-- ARTICLE WEB URL DISPLAYS HERE -->
+<!-- ARTICLE URL DISPLAYS HERE -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

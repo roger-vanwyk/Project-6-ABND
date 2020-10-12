@@ -1,7 +1,3 @@
 <<<<<<< HEAD
 include ':app'
 rootProject.name = "NewsReport"
-=======
-include ':app'
-rootProject.name='NewsApp'
->>>>>>> branch 'master' of https://github.com/roger-vanwyk/Project-6-ABND.git
